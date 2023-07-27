@@ -303,6 +303,21 @@ define Device/tplink_c50-v4
 endef
 TARGET_DEVICES += tplink_c50-v4
 
+define Device/tplink_mr200-v4
+  $(Device/tplink)
+  DTS := ArcherMR200v4
+  SUPPORTED_DEVICES := mr200v4
+  IMAGE_SIZE := 7872k
+  DEVICE_TITLE := TP-Link ArcherMR200 v4
+  TPLINK_FLASHLAYOUT := 8MLmtk
+  TPLINK_HWID := 0x001D589B
+  TPLINK_HWREV := 0x93
+  TPLINK_HWREVADD := 0x13
+  TPLINK_HVERSION := 3
+  DEVICE_PACKAGES := kmod-mt76x0e kmod-usb-ohci kmod-usb2 kmod-usb-net kmod-usb-net-qmi-wwan uqmi openvpn-openssl luci-app-openvpn 
+endef
+TARGET_DEVICES += tplink_mr200-v4
+
 define Device/tplink_tl-mr3020-v3
   $(Device/tplink)
   DTS := TL-MR3020V3

@@ -7,6 +7,15 @@
 
 This is the buildsystem for the OpenWrt Linux distribution.
 
+This is based on openwrt/openwrt and mrhaav/openwrt, the goals are:
+
+1- Supports MR200 V4 and V5.
+2- Build your own image so that you have control over what packages to include, so taht you overcome kernel version incompatiblity issues.
+3- LTE modem works.
+4- Support OpenVPN client out of the box.
+
+Refer to mr200v4 folder for config file, and modem fix.
+
 To build your own firmware you need a Linux, BSD or MacOSX system (case
 sensitive filesystem required). Cygwin is unsupported because of the lack
 of a case sensitive file system.
