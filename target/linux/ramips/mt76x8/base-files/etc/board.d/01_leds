@@ -154,6 +154,11 @@ zyxel,keenetic-extra-ii)
 	ucidef_set_led_netdev "wifi_led" "wifi" "green:wifi" "wlan0"
 	ucidef_set_led_switch "internet" "internet" "green:internet" "switch0" "0x01"
 	;;
+mr200v4)
+	ucidef_set_led_netdev "lan" "lan" "$boardname:white:lan" "eth0.1"
+	ucidef_set_led_netdev "wan" "wan" "$boardname:white:wan" "eth0.2"
+	set_wifi_led "$boardname:white:wlan"
+;;
 esac
 
 board_config_flush
